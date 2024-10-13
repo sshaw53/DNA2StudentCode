@@ -71,19 +71,19 @@ public class DNA {
             }
 
             // Create the numerical version of the next chunk (cut off the max number, add the next number)
-            if (i + 1 < seq_len) {
+            if (i + strlen < seq_len) {
                 num_current = num_current % (int) Math.pow(10, strlen - 1);
                 num_current *= 10;
-                if (sequence.charAt(i + 1) == 'A') {
+                if (sequence.charAt(i + strlen) == 'A') {
                     num_current += a;
                 }
-                else if (sequence.charAt(i + 1) == 'G') {
+                else if (sequence.charAt(i + strlen) == 'G') {
                     num_current += g;
                 }
-                else if (sequence.charAt(i + 1) == 'C') {
+                else if (sequence.charAt(i + strlen) == 'C') {
                     num_current += c;
                 }
-                else if (sequence.charAt(i + 1) == 'T') {
+                else if (sequence.charAt(i + strlen) == 'T') {
                     num_current += t;
                 }
             }
@@ -91,7 +91,7 @@ public class DNA {
         return max;
     }
 
-    public static int find(int idx, String seq, int num_STR, int num_current, int strlen, int seq_len) {
+    public static int find(int idx, String seq, int num_STR, int n_current, int strlen, int seq_len) {
         int current = idx;
         int finds = 0;
         // Assigning integer values for all different letters to help create a constant-time check
@@ -99,6 +99,7 @@ public class DNA {
         int g = 2;
         int c = 3;
         int t = 4;
+        int num_current = n_current;
 
         // If we haven't gotten to the end of the String and the next characters align with the STR, continue to traverse
         // and increase finds by 1
@@ -106,6 +107,7 @@ public class DNA {
             current += strlen;
             finds += 1;
 
+            num_current = 0;
             // Now shift the characters to find the number value of the next STR-length chunk
             for (int i = 0; i < strlen; i++) {
                 if (seq.charAt(i + current) == 'A') {

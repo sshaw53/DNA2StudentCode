@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d822f69-9e3c-4e2b-8ee1-11779bb646bd" name="Changes" comment="Debugging.">
+    <list default="true" id="6d822f69-9e3c-4e2b-8ee1-11779bb646bd" name="Changes" comment="All of my test cases now work except for testLargest()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DNA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DNA.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +157,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728783644848</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="All of my test cases now work except for testLargest()">
+      <option name="closed" value="true" />
+      <created>1728785582376</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728785582376</updated>
+    </task>
+    <task id="LOCAL-00006" summary="All of my test cases now work except for testLargest()">
+      <option name="closed" value="true" />
+      <created>1728785674006</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728785674006</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -166,7 +181,8 @@
     <MESSAGE value="Working on trying to implement my solution." />
     <MESSAGE value="How do I save space?" />
     <MESSAGE value="Debugging." />
-    <option name="LAST_COMMIT_MESSAGE" value="Debugging." />
+    <MESSAGE value="All of my test cases now work except for testLargest()" />
+    <option name="LAST_COMMIT_MESSAGE" value="All of my test cases now work except for testLargest()" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

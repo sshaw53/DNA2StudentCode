@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d822f69-9e3c-4e2b-8ee1-11779bb646bd" name="Changes" comment="All of my test cases now work except for testLargest()">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6d822f69-9e3c-4e2b-8ee1-11779bb646bd" name="Changes" comment="Working on implementing hash functions.">
+      <change beforePath="$PROJECT_DIR$/WORK_LOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/WORK_LOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DNA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DNA.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,18 +16,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "sshaw53"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sshaw53&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ztblick/DNA2StudentCode",
-    "accountId": "5967f974-bad8-47c7-ace0-e743b994895e"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ztblick/DNA2StudentCode&quot;,
+    &quot;accountId&quot;: &quot;5967f974-bad8-47c7-ace0-e743b994895e&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -38,34 +39,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.DNATest.executor": "Run",
-    "JUnit.DNATest.testBasic.executor": "Run",
-    "JUnit.DNATest.testChromosome22.executor": "Run",
-    "JUnit.DNATest.testEvenMore.executor": "Run",
-    "JUnit.DNATest.testLargest.executor": "Run",
-    "JUnit.DNATest.testMore.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.DNATest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DNATest.testBasic.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DNATest.testChromosome22.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DNATest.testEvenMore.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DNATest.testLargest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DNATest.testMore.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.DNATest.testLargest">
-    <configuration name="DNATest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DNA 2.0 Student Code" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DNATest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DNATest.testBasic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DNA 2.0 Student Code" />
       <option name="PACKAGE_NAME" value="" />
@@ -106,13 +98,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DNATest.testMore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DNA 2.0 Student Code" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DNATest" />
+      <option name="METHOD_NAME" value="testMore" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.DNATest.testLargest" />
         <item itemvalue="JUnit.DNATest.testChromosome22" />
-        <item itemvalue="JUnit.DNATest" />
-        <item itemvalue="JUnit.DNATest.testBasic" />
         <item itemvalue="JUnit.DNATest.testEvenMore" />
+        <item itemvalue="JUnit.DNATest.testMore" />
+        <item itemvalue="JUnit.DNATest.testBasic" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728785674006</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Working on implementing hash functions.">
+      <option name="closed" value="true" />
+      <created>1729474729645</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1729474729645</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -182,17 +192,7 @@
     <MESSAGE value="How do I save space?" />
     <MESSAGE value="Debugging." />
     <MESSAGE value="All of my test cases now work except for testLargest()" />
-    <option name="LAST_COMMIT_MESSAGE" value="All of my test cases now work except for testLargest()" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/DNA.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Working on implementing hash functions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on implementing hash functions." />
   </component>
 </project>

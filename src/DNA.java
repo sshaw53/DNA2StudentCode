@@ -39,6 +39,9 @@ public class DNA {
                 if (current_reps > max) {
                     max = current_reps;
                 }
+                if (found[1] + strlen >= seq_len) {
+                    return max;
+                }
                 num_current = hash(sequence, strlen, found[1]);
                 i = found[1] - 1;
             }
@@ -69,6 +72,7 @@ public class DNA {
                 num_current = hash(seq, strlen, current);
             }
             else {
+                finds[1] = current + 1;
                 return finds;
             }
         }

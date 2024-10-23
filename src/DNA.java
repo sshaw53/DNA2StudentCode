@@ -15,18 +15,19 @@ import static jdk.internal.org.jline.utils.Colors.h;
 
 public class DNA {
     // Typically, a radix would be 256 if dealing with characters but since our alphabet is just A,C,T,G we only need
-    // a radix of 4 to solve this, and p is typically a large prime number
+    // a radix of 4 to solve this, and p is typically a large prime number but we don't need p in this instance because
+    // the numbers are small enough that there won't be overlap
     public static int RADIX = 4;
-    public static int p = 9737333;
 
     public static int STRCount(String sequence, String STR) {
         int max = 0;
         int seq_len = sequence.length();
         int strlen = STR.length();
+        long power_to_add = (long)Math.pow(RADIX, strlen - 1);
 
         // Assigning integer values for the STR and the beginning of the sequence to help create a constant-time check
-        int num_STR = hash(STR, strlen, 0);
-        int num_current = hash(sequence, strlen, 0);
+        long num_STR = hash(STR, strlen, 0);
+        long num_current = hash(sequence, strlen, 0);
 
         // Go through each character and look for every instance where the STR matches the sequence
         for (int i = 0; i < seq_len; i++) {
@@ -41,46 +42,51 @@ public class DNA {
 
             // Create the numerical version of the next chunk (cut off the max number, add the next number)
             if (i + strlen < seq_len) {
-                num_current = rehash(num_current, sequence, strlen, i);
+                num_current = rehash(num_current, sequence, strlen, i, power_to_add);
             }
         }
         return max;
     }
 
-    public static int find(int idx, String seq, int num_STR, int n_current, int strlen, int seq_len) {
+    public static int find(int idx, String seq, long num_STR, long n_current, int strlen, int seq_len) {
         int current = idx;
         int finds = 0;
-        int num_current = n_current;
+        long num_current = n_current;
 
         // If we haven't gotten to the end of the String and the next characters align with the STR, continue to traverse
         // and increase finds by 1
-        while (current + 2 * strlen < seq_len && num_current == num_STR) {
-            current += strlen;
+        while (num_current == num_STR) {
             finds += 1;
 
             // Now shift the characters to find the number value of the next STR-length chunk
-            num_current = hash(seq, strlen, current);
+            if (current + 2 * strlen <= seq_len) {
+                current += strlen;
+                num_current = hash(seq, strlen, current);
+            }
+            else {
+                return finds;
+            }
         }
 
         // If not, it will immediately exit the loop and return the number of finds
         return finds;
     }
 
-    public static int hash(String str, int len, int idx) {
+    public static long hash(String str, int len, int idx) {
         // Modifies a string to a unique number utilizing hash functions (Horner's method)
-        int hashed = 0;
+        long hashed = 0;
         for(int i = idx; i < idx + len; i++) {
-            hashed = (RADIX * hashed + str.charAt(i)) % p;
+            hashed = (RADIX * hashed + str.charAt(i));
         }
         return hashed;
     }
 
-    public static int rehash(int toHash, String str, int len, int idx) {
+    public static long rehash(long toHash, String str, int len, int idx, long power_to_add) {
         // Adds the next letter, using the Rabin-Karp fingerprinting algorithm
         // Need to subtract the first term, multiply by R, and add the next term
-        int rehashed;
-        rehashed = ((toHash + p) - str.charAt(idx) * (int)Math.pow(RADIX, len - 1) % p) % p;
-        rehashed = ((rehashed * RADIX) + str.charAt(idx + len)) % p;
+        long rehashed;
+        rehashed = toHash - str.charAt(idx) * power_to_add;
+        rehashed = (rehashed * RADIX) + str.charAt(idx + len);
         return rehashed;
     }
 }

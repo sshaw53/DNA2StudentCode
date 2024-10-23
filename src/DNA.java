@@ -33,30 +33,35 @@ public class DNA {
         for (int i = 0; i < seq_len; i++) {
             // When we find a match, call the find() function to skip ahead and look for number of repeats
             if (num_STR == num_current) {
-                int current_reps = find(i, sequence, num_STR, num_current, strlen, seq_len);
+                int found[] = find(i, sequence, num_STR, num_current, strlen, seq_len);
+                int current_reps = found[0];
                 // If we find a larger value, change the max index
                 if (current_reps > max) {
                     max = current_reps;
                 }
+                num_current = hash(sequence, strlen, found[1]);
+                i = found[1] - 1;
             }
-
             // Create the numerical version of the next chunk (cut off the max number, add the next number)
-            if (i + strlen < seq_len) {
+            else if (i + strlen < seq_len) {
                 num_current = rehash(num_current, sequence, strlen, i, power_to_add);
             }
         }
         return max;
     }
 
-    public static int find(int idx, String seq, long num_STR, long n_current, int strlen, int seq_len) {
+    // This function iterates through the sequence looking for the number of consecutive STRs in a row
+    // Returns an array of size 2, with the first index representing the number of finds and the second index for the
+    // next index to look at
+    public static int[] find(int idx, String seq, long num_STR, long n_current, int strlen, int seq_len) {
         int current = idx;
-        int finds = 0;
+        int[] finds = new int[2];
         long num_current = n_current;
 
         // If we haven't gotten to the end of the String and the next characters align with the STR, continue to traverse
         // and increase finds by 1
         while (num_current == num_STR) {
-            finds += 1;
+            finds[0] += 1;
 
             // Now shift the characters to find the number value of the next STR-length chunk
             if (current + 2 * strlen <= seq_len) {
@@ -69,6 +74,9 @@ public class DNA {
         }
 
         // If not, it will immediately exit the loop and return the number of finds
+        // It should also return the next index to look at in the for-loop (the second letter of the last instance of the
+        // STR)
+        finds[1] = current - strlen + 1;
         return finds;
     }
 

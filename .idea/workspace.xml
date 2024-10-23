@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d822f69-9e3c-4e2b-8ee1-11779bb646bd" name="Changes" comment="Implemented hash functions, still too slow :(">
-      <change afterPath="$PROJECT_DIR$/test_files/1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_files/1_answers.txt" afterDir="false" />
+    <list default="true" id="6d822f69-9e3c-4e2b-8ee1-11779bb646bd" name="Changes" comment="Working on improving efficiency.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WORK_LOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/WORK_LOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DNA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DNA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DNATest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DNATest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,10 +111,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.DNATest.testLargest" />
+        <item itemvalue="JUnit.DNATest.testBasic" />
         <item itemvalue="JUnit.DNATest.testChromosome22" />
         <item itemvalue="JUnit.DNATest.testEvenMore" />
         <item itemvalue="JUnit.DNATest.testMore" />
-        <item itemvalue="JUnit.DNATest.testBasic" />
       </list>
     </recent_temporary>
   </component>
@@ -195,8 +191,27 @@
       <option name="project" value="LOCAL" />
       <updated>1729477261748</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Working on improving efficiency.">
+      <option name="closed" value="true" />
+      <created>1729642760700</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1729642760700</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -206,17 +221,7 @@
     <MESSAGE value="All of my test cases now work except for testLargest()" />
     <MESSAGE value="Working on implementing hash functions." />
     <MESSAGE value="Implemented hash functions, still too slow :(" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented hash functions, still too slow :(" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/DNA.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Working on improving efficiency." />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on improving efficiency." />
   </component>
 </project>
